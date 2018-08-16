@@ -22015,6 +22015,76 @@
             }
           },
           "_name": "content7",
+          "_customHTML": "<section class=\"content3\" group=\"Contents\" plugins=\"amp-main, font-awesome\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"4\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"4\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Count\" name=\"showCount\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#313131\" condition=\"overlay && bg.type == 'image'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"mbr-row\">\n\n            <div class=\"mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12\">\n                <h2 class=\"mbr-fonts-style count align-right\" mbr-theme-style=\"display-2\" mbr-if=\"showCount\" data-app-selector=\".count\">Topic</h2>\n                <h2 class=\"mbr-fonts-style title1 mbr-section-title mbr-bold align-right\" mbr-theme-style=\"display-3\" mbr-if=\"showTitle\" data-app-selector=\".title1\">A shadow of reality</h2>\n                <p class=\"mbr-fonts-style align-right text1 mbr-text\" mbr-theme-style=\"display-4\" data-app-selector=\".text1, .mbr-section-btn1\" mbr-if=\"showText\"></p>\n                <div class=\"mbr-section-btn1 align-right\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-6\">\n                    <a class=\"btn btn-lg mbr-editable-button btn-primary\" href=\"https://mobirise.com\">\n                        <span class=\"fa fa-arrow-right mbr-iconfont-btn\"></span>READ MORE</a>\n                </div>\n\n            </div>\n\n            <div class=\"mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12 vcenter\">\n                <h2 class=\"mbr-fonts-style count2 align-left\" mbr-theme-style=\"display-2\" mbr-if=\"showCount\" data-app-selector=\".count2\">Scriptures</h2>\n                <h2 class=\"mbr-fonts-style title2 mbr-section-title mbr-bold\" mbr-theme-style=\"display-3\" mbr-if=\"showTitle\" data-app-selector=\".title2\">In the bible</h2>\n                <p class=\"mbr-fonts-style mbr-text text2 align-left\" mbr-theme-style=\"display-4\" data-app-selector=\".text2, .mbr-section-btn2\" mbr-if=\"showText\"><b>Colossians 2:16, 17\n<br></b>\"Therefore let no man judge YOU in eating and drinking or in respect of a festival or of an observance of the new moon or of a sabbath; for those things are a shadow of the things to come, but the reality belongs to the Christ.\"\n<br><br><b>Hebrews 8:4, 5\n<br></b>\"If, now, he were upon earth, he would not be a priest, there being [men] who offer the gifts according to the Law, but which [men] are rendering sacred service in a typical representation and a shadow of the heavenly things; just as Moses, when about to make the tent in completion, was given the divine command: For says he: “See that you make all things after [their] pattern that was shown to you in the mountain.”\n<br><br><b>Hebrews 9:11, 12\n<br></b>\"However, when Christ came as a high priest of the good things that have come to pass, through the greater and more perfect tent not made with hands, that is, not of this creation, he entered, no, not with the blood of goats and of young bulls, but with his own blood, once for all time into the holy place and obtained an everlasting deliverance [for us].\"\n<br><br><b>Hebrews 9:24\n<br></b>\"For Christ entered, not into a holy place made with hands, which is a copy of the reality, but into heaven itself, now to appear before the person of God for us.\"&nbsp;<br></p>\n                <div class=\"mbr-section-btn2\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-6\">\n                    <a class=\"btn btn-lg mbr-editable-button btn-primary\" href=\"https://mobirise.com\">\n                        <span class=\"fa fa-arrow-right mbr-iconfont-btn\"></span>READ MORE</a>\n                </div>\n            </div>\n\n        </div>\n    </div>\n\n\n</section>",
+          "_anchor": "content7-4g",
+          "_isUserblock": true,
+          "_sourceTheme": "fitnessamp",
+          "_cid": "r0OFlPkfE5",
+          "_protectedParams": [],
+          "_global": false,
+          "_once": false,
+          "_params": {}
+        },
+        {
+          "_styles": {
+            "& when not (@fullScreen)": {
+              "padding-top": "(@paddingTop * 1rem)",
+              "padding-bottom": "(@paddingBottom * 1rem)"
+            },
+            "& when (@bg-type = 'color')": {
+              "background-color": "@bg-value"
+            },
+            "& when (@bg-type = 'image')": {
+              "background-image": "url(@bg-value)",
+              ".mbr-overlay": {
+                "background-color": "@overlayColor",
+                "opacity": "@overlayOpacity"
+              }
+            },
+            ".mbr-col-lg-6": {
+              "padding-right": "5rem",
+              "padding-left": "5rem"
+            },
+            ".mbr-section-title": {
+              "color": "#29282d"
+            },
+            ".mbr-text, .mbr-section-btn": {
+              "color": "#b9b9b9"
+            },
+            ".vcenter": {
+              "margin": "auto",
+              "max-width": "600px"
+            },
+            ".count, .count2": {
+              "color": "#dadada",
+              "font-weight": "400",
+              "margin-bottom": "-35px"
+            },
+            ".video-block": {
+              "width": "100%"
+            },
+            "@media (max-width: 991px)": {
+              ".mbr-section-btn": {
+                "margin-bottom": "2rem"
+              },
+              ".vcenter": {
+                "margin-top": "2rem"
+              }
+            },
+            "@media (max-width: 576px)": {
+              ".mbr-col-lg-6": {
+                "padding-right": "0rem",
+                "padding-left": "0rem"
+              }
+            },
+            ".text2, .mbr-section-btn2": {
+              "color": "#000000"
+            },
+            ".text1, .mbr-section-btn1": {
+              "color": "#000000"
+            }
+          },
+          "_name": "content7",
           "_customHTML": "<section class=\"content3\" group=\"Contents\" plugins=\"amp-main, font-awesome\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"4\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"4\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Count\" name=\"showCount\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#313131\" condition=\"overlay && bg.type == 'image'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"mbr-row\">\n\n            <div class=\"mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12\">\n                <h2 class=\"mbr-fonts-style count align-right\" mbr-theme-style=\"display-2\" mbr-if=\"showCount\" data-app-selector=\".count\">Topic</h2>\n                <h2 class=\"mbr-fonts-style title1 mbr-section-title mbr-bold align-right\" mbr-theme-style=\"display-3\" mbr-if=\"showTitle\" data-app-selector=\".title1\">All false Religion</h2>\n                <p class=\"mbr-fonts-style align-right text1 mbr-text\" mbr-theme-style=\"display-4\" data-app-selector=\".text1, .mbr-section-btn1\" mbr-if=\"showText\"></p>\n                <div class=\"mbr-section-btn1 align-right\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-6\">\n                    <a class=\"btn btn-lg mbr-editable-button btn-primary\" href=\"https://mobirise.com\">\n                        <span class=\"fa fa-arrow-right mbr-iconfont-btn\"></span>READ MORE</a>\n                </div>\n\n            </div>\n\n            <div class=\"mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12 vcenter\">\n                <h2 class=\"mbr-fonts-style count2 align-left\" mbr-theme-style=\"display-2\" mbr-if=\"showCount\" data-app-selector=\".count2\">Scriptures</h2>\n                <h2 class=\"mbr-fonts-style title2 mbr-section-title mbr-bold\" mbr-theme-style=\"display-3\" mbr-if=\"showTitle\" data-app-selector=\".title2\">In the bible</h2>\n                <p class=\"mbr-fonts-style mbr-text text2 align-left\" mbr-theme-style=\"display-4\" data-app-selector=\".text2, .mbr-section-btn2\" mbr-if=\"showText\"><b>Revelation 14:8\n</b><br>“She has fallen! Babylon the Great has fallen, she who made all the nations drink of the wine of the anger of her fornication!”\n<br><b>Revelation 17:3-5\n</b><br>\"And he carried me away in [the power of the] spirit into a wilderness. And I caught sight of a woman sitting upon a scarlet-colored wild beast that was full of blasphemous names and that had seven heads and ten horns. And the woman was arrayed in purple and scarlet, and was adorned with gold and precious stone and pearls and had in her hand a golden cup that was full of disgusting things and the unclean things of her fornication. And upon her forehead was written a name, a mystery: “Babylon the Great, the mother of the harlots and of the disgusting things of the earth.”\n<br><b>Revelation 17:16\n</b><br>\"And the ten horns that you saw, and the wild beast, these will hate the harlot and will make her devastated and naked, and will eat up her fleshy parts and will completely burn her with fire.\"\n<br><b>Revelation 18:2,3\n</b><br>\"And he cried out with a strong voice, saying: “She has fallen! Babylon the Great has fallen, and she has become a dwelling place of demons and a lurking place of every unclean exhalation and a lurking place of every unclean and hated bird! For because of the wine of the anger of her fornication all the nations have fallen [victim], and the kings of the earth committed fornication with her, and the traveling merchants of the earth became rich due to the power of her shameless luxury.”\n<br><b>Revelation 18:7,8\n</b><br>\"To the extent that she glorified herself and lived in shameless luxury, to that extent give her torment and mourning. For in her heart she keeps saying, ‘I sit a queen, and I am no widow, and I shall never see mourning.’ That is why in one day her plagues will come, death and mourning and famine, and she will be completely burned with fire, because Jehovah God, who judged her, is strong.\"\n<br><b>Revelation 18:21\n</b><br>\"And a strong angel lifted up a stone like a great millstone and hurled it into the sea, saying: “Thus with a swift pitch will Babylon the great city be hurled down, and she will never be found again.\"\n<br><b>Revelation 18:24\n</b><br>\"Yes, in her was found the blood of prophets and of holy ones and of all those who have been slaughtered on the earth.”&nbsp;<br></p>\n                <div class=\"mbr-section-btn2\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-6\">\n                    <a class=\"btn btn-lg mbr-editable-button btn-primary\" href=\"https://mobirise.com\">\n                        <span class=\"fa fa-arrow-right mbr-iconfont-btn\"></span>READ MORE</a>\n                </div>\n            </div>\n\n        </div>\n    </div>\n\n\n</section>",
           "_anchor": "content7-3w",
           "_isUserblock": true,
@@ -23280,76 +23350,6 @@
           "_isUserblock": true,
           "_sourceTheme": "fitnessamp",
           "_cid": "r0OF0BkK69",
-          "_protectedParams": [],
-          "_global": false,
-          "_once": false,
-          "_params": {}
-        },
-        {
-          "_styles": {
-            "& when not (@fullScreen)": {
-              "padding-top": "(@paddingTop * 1rem)",
-              "padding-bottom": "(@paddingBottom * 1rem)"
-            },
-            "& when (@bg-type = 'color')": {
-              "background-color": "@bg-value"
-            },
-            "& when (@bg-type = 'image')": {
-              "background-image": "url(@bg-value)",
-              ".mbr-overlay": {
-                "background-color": "@overlayColor",
-                "opacity": "@overlayOpacity"
-              }
-            },
-            ".mbr-col-lg-6": {
-              "padding-right": "5rem",
-              "padding-left": "5rem"
-            },
-            ".mbr-section-title": {
-              "color": "#29282d"
-            },
-            ".mbr-text, .mbr-section-btn": {
-              "color": "#b9b9b9"
-            },
-            ".vcenter": {
-              "margin": "auto",
-              "max-width": "600px"
-            },
-            ".count, .count2": {
-              "color": "#dadada",
-              "font-weight": "400",
-              "margin-bottom": "-35px"
-            },
-            ".video-block": {
-              "width": "100%"
-            },
-            "@media (max-width: 991px)": {
-              ".mbr-section-btn": {
-                "margin-bottom": "2rem"
-              },
-              ".vcenter": {
-                "margin-top": "2rem"
-              }
-            },
-            "@media (max-width: 576px)": {
-              ".mbr-col-lg-6": {
-                "padding-right": "0rem",
-                "padding-left": "0rem"
-              }
-            },
-            ".text2, .mbr-section-btn2": {
-              "color": "#000000"
-            },
-            ".text1, .mbr-section-btn1": {
-              "color": "#000000"
-            }
-          },
-          "_name": "content7",
-          "_customHTML": "<section class=\"content3\" group=\"Contents\" plugins=\"amp-main, font-awesome\" mbr-class=\"{'mbr-fullscreen': fullScreen}\">\n\n    <mbr-parameters>\n        <input type=\"checkbox\" title=\"Full Screen\" name=\"fullScreen\">\n        <input type=\"range\" inline title=\"Top\" name=\"paddingTop\" min=\"0\" max=\"10\" step=\"1\" value=\"4\" condition=\"fullScreen == false\">\n        <input type=\"range\" inline title=\"Bottom\" name=\"paddingBottom\" min=\"0\" max=\"10\" step=\"1\" value=\"4\" condition=\"fullScreen == false\">\n        <input type=\"checkbox\" title=\"Show Title\" name=\"showTitle\" checked>\n        <input type=\"checkbox\" title=\"Show Count\" name=\"showCount\" checked>\n        <input type=\"checkbox\" title=\"Show Text\" name=\"showText\" checked>\n        <input type=\"checkbox\" title=\"Show Buttons\" name=\"showButtons\">\n        <fieldset type=\"background\" name=\"bg\">\n            <input type=\"color\" title=\"Background Color\" value=\"#ffffff\" selected>\n            <input type=\"image\" title=\"Background Image\" value=\"@PROJECT_PATH@/assets/images/background1.jpg\">\n        </fieldset>\n        <input type=\"checkbox\" title=\"Overlay\" name=\"overlay\" condition=\"bg.type !== 'color'\" checked>\n        <input type=\"color\" title=\"Overlay Color\" name=\"overlayColor\" value=\"#313131\" condition=\"overlay && bg.type == 'image'\">\n        <input type=\"range\" inline title=\"Opacity\" name=\"overlayOpacity\" min=\"0\" max=\"1\" step=\"0.1\" value=\"0.6\" condition=\"overlay && bg.type == 'image'\">\n    </mbr-parameters>\n    <div class=\"mbr-overlay\" mbr-if=\"overlay && bg.type !== 'color'\" opacity=\"{{overlayOpacity}}\" bg-color=\"{{overlayColor}}\"></div>\n\n    <div class=\"container\">\n        <div class=\"mbr-row\">\n\n            <div class=\"mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12\">\n                <h2 class=\"mbr-fonts-style count align-right\" mbr-theme-style=\"display-2\" mbr-if=\"showCount\" data-app-selector=\".count\">Topic</h2>\n                <h2 class=\"mbr-fonts-style title1 mbr-section-title mbr-bold align-right\" mbr-theme-style=\"display-3\" mbr-if=\"showTitle\" data-app-selector=\".title1\">A shadow of reality</h2>\n                <p class=\"mbr-fonts-style align-right text1 mbr-text\" mbr-theme-style=\"display-4\" data-app-selector=\".text1, .mbr-section-btn1\" mbr-if=\"showText\"></p>\n                <div class=\"mbr-section-btn1 align-right\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-6\">\n                    <a class=\"btn btn-lg mbr-editable-button btn-primary\" href=\"https://mobirise.com\">\n                        <span class=\"fa fa-arrow-right mbr-iconfont-btn\"></span>READ MORE</a>\n                </div>\n\n            </div>\n\n            <div class=\"mbr-col-lg-6 mbr-col-md-12 mbr-col-sm-12 vcenter\">\n                <h2 class=\"mbr-fonts-style count2 align-left\" mbr-theme-style=\"display-2\" mbr-if=\"showCount\" data-app-selector=\".count2\">Scriptures</h2>\n                <h2 class=\"mbr-fonts-style title2 mbr-section-title mbr-bold\" mbr-theme-style=\"display-3\" mbr-if=\"showTitle\" data-app-selector=\".title2\">In the bible</h2>\n                <p class=\"mbr-fonts-style mbr-text text2 align-left\" mbr-theme-style=\"display-4\" data-app-selector=\".text2, .mbr-section-btn2\" mbr-if=\"showText\"><b>Colossians 2:16, 17\n<br></b>\"Therefore let no man judge YOU in eating and drinking or in respect of a festival or of an observance of the new moon or of a sabbath; for those things are a shadow of the things to come, but the reality belongs to the Christ.\"\n<br><br><b>Hebrews 8:4, 5\n<br></b>\"If, now, he were upon earth, he would not be a priest, there being [men] who offer the gifts according to the Law, but which [men] are rendering sacred service in a typical representation and a shadow of the heavenly things; just as Moses, when about to make the tent in completion, was given the divine command: For says he: “See that you make all things after [their] pattern that was shown to you in the mountain.”\n<br><br><b>Hebrews 9:11, 12\n<br></b>\"However, when Christ came as a high priest of the good things that have come to pass, through the greater and more perfect tent not made with hands, that is, not of this creation, he entered, no, not with the blood of goats and of young bulls, but with his own blood, once for all time into the holy place and obtained an everlasting deliverance [for us].\"\n<br><br><b>Hebrews 9:24\n<br></b>\"For Christ entered, not into a holy place made with hands, which is a copy of the reality, but into heaven itself, now to appear before the person of God for us.\"&nbsp;<br></p>\n                <div class=\"mbr-section-btn2\" mbr-if=\"showButtons\" data-toolbar=\"-mbrBtnMove\" mbr-buttons mbr-theme-style=\"display-6\">\n                    <a class=\"btn btn-lg mbr-editable-button btn-primary\" href=\"https://mobirise.com\">\n                        <span class=\"fa fa-arrow-right mbr-iconfont-btn\"></span>READ MORE</a>\n                </div>\n            </div>\n\n        </div>\n    </div>\n\n\n</section>",
-          "_anchor": "content7-4g",
-          "_isUserblock": true,
-          "_sourceTheme": "fitnessamp",
-          "_cid": "r0OFlPkfE5",
           "_protectedParams": [],
           "_global": false,
           "_once": false,
